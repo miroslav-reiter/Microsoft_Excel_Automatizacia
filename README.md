@@ -104,7 +104,8 @@ Private Sub Worksheet_SelectionChange(ByVal Target As Range)
     Target.EntireRow.Interior.ColorIndex = 6
     Target.Interior.ColorIndex = xlColorIndexNone
 End Sub
-```![color-vba](https://user-images.githubusercontent.com/24510943/197604877-5859216e-352d-494f-af55-dc7c29e747c8.gif)
+```
+![color-vba](https://user-images.githubusercontent.com/24510943/197604877-5859216e-352d-494f-af55-dc7c29e747c8.gif)
 
 
 
