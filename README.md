@@ -105,6 +105,32 @@ Private Sub Worksheet_SelectionChange(ByVal Target As Range)
     Target.Interior.ColorIndex = xlColorIndexNone
 End Sub
 ```
+  
+```vba
+Sub vytlacFarby()
+    Dim riadok As Integer: riadok = 2
+    Dim stlpec As Integer: stlpec = 2
+    Dim i As Integer
+
+    For i = 1 To 56
+        Cells(riadok, stlpec).Interior.ColorIndex = i
+        Cells(riadok, stlpec).Value = i
+
+        If i > 1 And i Mod 14 = 0 Then
+            stlpec = stlpec + 1
+            riadok = 2
+        Else
+            riadok = riadok + 1
+        End If
+    Next i
+
+    'Range("B2:E15").Interior.ColorIndex = -4142
+    Range("B2:E15").Borders.ColorIndex = -4142
+    Range("B2:E15").Font.ColorIndex = -4105
+
+End Sub
+```
+
 ![color-vba](https://user-images.githubusercontent.com/24510943/197604877-5859216e-352d-494f-af55-dc7c29e747c8.gif)
 
 
