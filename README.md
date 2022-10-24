@@ -105,7 +105,10 @@ Private Sub Worksheet_SelectionChange(ByVal Target As Range)
     Target.Interior.ColorIndex = xlColorIndexNone
 End Sub
 ```
-  
+
+![colors](https://user-images.githubusercontent.com/24510943/197624888-29fd0036-5363-4d99-8c71-341f4d90145f.png)
+
+
 ```vba
 Sub vytlacFarby()
     Dim riadok As Integer: riadok = 2
