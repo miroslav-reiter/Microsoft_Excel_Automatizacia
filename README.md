@@ -90,9 +90,21 @@ With ActiveSheet.PageSetup
 End With
 End Sub
 ```
+### 🟨 Zvýraznenie celého riadku a stĺpca podľa aktuálne vybranej bunky (Do )
+![2022-10-24 20_52_07-SelectionChange xlsm - Excel](https://user-images.githubusercontent.com/24510943/197603184-d853ae6d-6c29-4cb2-be0e-9357537ac5b6.png)
+
+```vba
+Private Sub Worksheet_SelectionChange(ByVal Target As Range)
+    ' ColorIndex property (Excel Graph)
+    ' https://learn.microsoft.com/en-us/office/vba/api/excel.colorindex
+    ' 1 - cierna, 2 - biela, 3 - cervena, 4 - Zelena,
+    ' 5 - Modra, 6 - zlta, 7 - magenta, 8 - cyan, 9 - bordova
+    Cells.Interior.ColorIndex = xlColorIndexNone
+    Target.EntireColumn.Interior.ColorIndex = 6
+    Target.EntireRow.Interior.ColorIndex = 6
+    Target.Interior.ColorIndex = xlColorIndexNone
+End Sub
+```![color-vba](https://user-images.githubusercontent.com/24510943/197604877-5859216e-352d-494f-af55-dc7c29e747c8.gif)
 
 
 
-
-
-```
