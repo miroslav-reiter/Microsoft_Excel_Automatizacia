@@ -136,5 +136,58 @@ End Sub
 
 ![color-vba](https://user-images.githubusercontent.com/24510943/197604877-5859216e-352d-494f-af55-dc7c29e747c8.gif)
 
+## 🧱 Príklad na Const (Konštantu)
+```vba
+Const odpovedOtazkaZivotaSmrti As Integer = 42
+Const bulharskaKonstanta = 8
+Const pocetBodov = 4
+Const PI As Double = 3.14
+Const E = 2.78
+Const DPH = 1.2
+Public Const SPRAVA As String = "Zapis sa do prezencky"
+Const konstanta1 = "Ahoj", konstanta2 As String = "Hello"
+```
+## ✨ Príklady na Enum (Enumerácia)
 
+```vba
+Enum ZnackyAut
+    Porsche = 100
+    Audi
+    Skoda
+    Opel
+    Seat
+End Enum
+```
 
+```vba
+Enum OddeleniaRozpocty
+    IT = 10000
+    HR = 9000
+    SALES = 8000
+    MARKETING = 20000
+    OPERATION = 5000
+
+End Enum
+```
+
+```vba
+Enum OddeleniaRozpocty
+    IT = 10000
+    HR = 9000
+    SALES = 8000
+    MARKETING = 20000
+    OPERATION = 5000
+
+End Enum
+```
+
+```vba
+Public Enum InterfaceColors 
+
+icDeepSkyBlue = &HFFBF00& 
+icSpringGreen = &H7FFF00& 
+icForestGreen = &H228B22& 
+icGoldenrod = &H20A5DA& 
+
+End Enum
+```
