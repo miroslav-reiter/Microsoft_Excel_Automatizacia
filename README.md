@@ -42,7 +42,7 @@ velkyRozsah.Formula = "=randbetween(1,6)"
 End Sub
 
 ```
-### 🍒 Množinové hromadné operácie nad rozsahmi (Range) a to prienik (Intersect)
+### 🍑 Množinové hromadné operácie nad rozsahmi (Range) a to prienik (Intersect)
 ```vba
 
 Sub over_prienik_rozsahov()
