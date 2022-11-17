@@ -191,3 +191,37 @@ icGoldenrod = &H20A5DA&
 
 End Enum
 ```
+## ➡️ Automatické Prispôsobenie Šírky Stĺpcov podľa Obsahu (AutoFit) v celom súbore/Zošite
+Vkladať do objektu **Tento_zošit (This.Workbook)**
+```vb
+Private Sub Workbook_SheetChange(ByVal Sh As Object, ByVal Target As Range)
+
+    Application.ScreenUpdating = False
+    Dim i As Variant
+
+    For Each i In Target.Columns
+        Worksheets(Sh.Name).Columns(i.Column).AutoFit
+    Next i
+
+    Application.ScreenUpdating = True
+
+End Sub
+
+```
+
+## 🆗 Štatistika k vybranej tabuľke
+Nezabudnúť vytvoriť tabuľku resp. zmeniť jej názov (country_level_data_0)
+```vb
+
+Dim tabZnecistenie As ListObject
+Set tabZnecistenie = ActiveSheet.ListObjects("country_level_data_0")
+
+MsgBox "Tabulka Znecistenie ma celkovy pocet riadkov: " & tabZnecistenie.Range.Rows.Count
+MsgBox "Tabulka Znecistenie ma celkovy pocet riadkov v hlavicke: " & tabZnecistenie.HeaderRowRange.Rows.Count
+MsgBox "Tabulka Znecistenie ma celkovy pocet riadkov v hlavicke: " & tabZnecistenie.DataBodyRange.Rows.Count
+
+MsgBox "Tabulka Znecistenie ma celkovy pocet stlpcov: " & tabZnecistenie.Range.Columns.Count
+
+Set tabZnecistenie = Nothing
+
+```
