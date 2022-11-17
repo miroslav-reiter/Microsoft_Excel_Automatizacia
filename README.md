@@ -194,8 +194,8 @@ End Enum
 ## ➡️ Automatické Prispôsobenie Šírky Stĺpcov podľa Obsahu (AutoFit) v celom súbore/Zošite
 Vkladať do objektu **Tento_zošit (This.Workbook)**
 Klávesové skratky:
-SK -> ALT + d + v + o
-ENG -> ALT + H + O + I
+SK -> ALT + D + V + O  
+ENG -> ALT + H + O + I  
 
 ```vb
 Private Sub Workbook_SheetChange(ByVal Sh As Object, ByVal Target As Range)
